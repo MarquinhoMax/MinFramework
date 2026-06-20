@@ -1,29 +1,19 @@
-const CACHE_NAME = "app-v1";
+const CACHE_NAME = "app-v2";
+const BASE = "/MinFramework/";
 
 const FILES = [
-    "/",
-    "/index.html",
-    "/css/style.css",
-    "/assets/camadas.png",
-
-    "/componentes/elementos.js",
-    "/componentes/funcoes.js",
-
-    "/script/script.js",
-    "/script/dados.js",
-
-    "/manifest.json"
+    BASE,
+    BASE + "index.html",
+    BASE + "manifest.json",
+    BASE + "css/style.css",
+    BASE + "assets/camadas.png",
+    BASE + "componentes/elementos.js",
+    BASE + "script/script.js",
+    BASE + "script/dados.js"
 ];
+
 self.addEventListener("install", event => {
     event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(cache => cache.addAll(FILES))
-    );
-});
-
-self.addEventListener("fetch", event => {
-    event.respondWith(
-        caches.match(event.request)
-            .then(response => response || fetch(event.request))
+        caches.open(CACHE_NAME).then(cache => cache.addAll(FILES))
     );
 });
