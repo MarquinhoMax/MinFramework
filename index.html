@@ -17,12 +17,11 @@
 
     <script>
         if ('serviceWorker' in navigator) {
-
-
-            navigator.serviceWorker.register('sw.js')
+            navigator.serviceWorker.register('/MinFramework/sw.js')
                 .then(() => {
                     console.log('Service Worker registrado');
-                });
+                })
+                .catch(err => console.error('Erro SW:', err));
         }
     </script>
 
