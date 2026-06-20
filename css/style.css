@@ -1,0 +1,50 @@
+main {
+    background-color: aqua;
+}
+
+.lista-container {
+    display: flex;
+    flex-direction: column;
+    height: 100mm;
+    padding: 1mm;
+    overflow-y:scroll ;
+    font-weight: bold;
+
+}
+
+.top-bar{
+    display: flex;
+    background-color: bisque;
+    justify-content: center;
+    align-items: center;
+}
+.div-btn{
+    display: flex;
+    font-size: 5mm;
+    padding-inline: 10mm;
+}
+
+
+.txt-nome{
+    font-size: 4.5mm;
+    padding: 1mm;
+    border-radius: 1mm;
+    border-style: none;
+    margin: 1mm;
+}
+
+.tabela{
+    border-collapse: collapse;
+}
+
+.tabela  tbody tr:hover{
+    background-color: aqua;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #b8b8b8;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(253, 252, 232);
+}
